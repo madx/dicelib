@@ -1,6 +1,6 @@
 require File.join(File.dirname(__FILE__), 'helper')
 
-class DiceTest
+class DiceTests
   include Dicelib
   
   def setup
@@ -151,3 +151,5 @@ class DiceTest
   end
   
 end
+
+run_tests(DiceTests)

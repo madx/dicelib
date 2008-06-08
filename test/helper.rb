@@ -2,7 +2,7 @@ require 'rubygems'
 require 'mtest'
 require File.join(File.dirname(__FILE__), '..', 'lib', 'dicelib')
 
-def test(klass)
+def run_tests(klass)
   puts 
   results = {:pass => 0, :fail => 0, :err => 0}
   (t = klass.new).methods.sort.each do |meth|
