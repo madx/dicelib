@@ -2,7 +2,7 @@
                  /\ \  __               /\_ \    __/\ \
                  \_\ \/\_\    ___     __\//\ \  /\_\ \ \____
                  /'_` \/\ \  /'___\ /'__`\\ \ \ \/\ \ \ '__`\
-                /\ \L\ \ \ \/\ \__//\  __/ \_\ \_\ \ \ \ \L\ \
+                /\ \_\ \ \ \/\ \__//\  __/ \_\ \_\ \ \ \ \_\ \
                 \ \___,_\ \_\ \____\ \____\/\____\\ \_\ \_,__/
                  \/__,_ /\/_/\/____/\/____/\/____/ \/_/\/___/
 
@@ -10,5 +10,26 @@
                      A tiny dice-rolling library for those
                           role-playing games fanatics
 
+== Installing
+
+$ gem sources -a http://gems.github.com (only once)
+$ gem install madx-dicelib
+
+Or you can run
+
+$ git clone git://github.com/madx/dicelib.git
+$ rake gem
+
+And a gem package will be built in the pkg/ folder, just get here and run
+
+$ sudo gem install
+
+== Usage
 
 
+== Tests
+
+All tests use MTest, which you can find at http://github.com/madx/mtest/
+
+$ rake test           # runs all the tests
+$ rake test:[class]   # e.g. rake test:dice. Run the tests for a specific class
