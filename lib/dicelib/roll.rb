@@ -14,12 +14,13 @@ module Dicelib
     
     def self.expr(str)
       raise ArgumentError, "#{str} is not a string" unless str.is_a?(String)
-      if str.match(/(\d+)d(\d+)/)
+      if str.match(/^(\d+)d(\d+)$/)
         dice = []
-        $~[1].to_i.times { dice << Dice.new($~)}
+        $~[1].to_i.times { dice << Dice.new($~[2]) }
       else
         raise ArgumentError, "#{str.inspect} doesn't match the format"
       end
+      new(*dice)
     end
     
     def add(*dice)
