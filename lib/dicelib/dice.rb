@@ -10,9 +10,8 @@ module Dicelib
     DEFAULT_DICE = 6
     
     def initialize(sides=DEFAULT_DICE)
-      if SIDES.include?(sides)
-        @sides = sides.to_i
-      else
+      @sides = sides.to_i
+      unless SIDES.include?(@sides)
         raise ArgumentError, "invalid sides (#{sides})"
       end
       @value = nil
