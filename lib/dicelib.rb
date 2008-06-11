@@ -4,4 +4,6 @@ module Dicelib
   
 end
 
-require File.join(File.dirname(__FILE__), 'dicelib', 'dice')
+%w(dice roll).each do |lib|
+  require File.join(File.dirname(__FILE__), 'dicelib', lib)
+end
